@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ZoeratorTabs.Views.FirstPage" 
+             Title="Home">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#E4F1FE">
+            <Label Text="Zoerator" FontSize="80" TextColor="Black" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+            <ListView x:Name="listaCategorias" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Margin="5">
+                                <Grid BackgroundColor="#663399" Padding="10">
+                                </Grid>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Name}" TextColor="Black"  VerticalOptions="CenterAndExpand"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
